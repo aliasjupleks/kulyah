@@ -4,6 +4,7 @@ export default function Homepage() {
       <span className="font-bold text-2xl">
         yoi mamen
       </span>
+      <button className="btn btn-primary">a button</button>
     </div>
   )
 }
