@@ -3,10 +3,27 @@ import { useState } from 'react';
 
 const BaseNavbar = () => {
   const [isOpen, setOpen] = useState(false);
-  // to flex-col
+  const navItem = [
+    {
+      name: 'Home',
+      url: 'home',
+    },
+    {
+      name: 'Features',
+      url: 'features',
+    },
+    {
+      name: 'Pricing',
+      url: 'pricing',
+    },
+    {
+      name: 'Contact',
+      url: 'contact',
+    },
+  ];
 
   return (
-    <nav className="bg-neutral text-neutral-content sticky top-0">
+    <nav className="bg-gray-700 text-white sticky top-0 z-10">
       <div className="flex flex-col items-center">
         <div className="w-full flex justify-between p-3 items-center">
           <div className="flex-1">
@@ -18,29 +35,13 @@ const BaseNavbar = () => {
           {/* if > lg breakpoint */}
           <div className="flex-none hidden lg:flex">
             <div className="flex items-stretch">
-              <a className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
-                <Link to="home" smooth={true} duration={250}>
-                  Home
-                </Link>
-              </a>
-
-              <a className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
-                <Link to="features" smooth={true} duration={250}>
-                  Features
-                </Link>
-              </a>
-
-              <a className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
-                <Link to="pricing" smooth={true} duration={250}>
-                  Pricing
-                </Link>
-              </a>
-
-              <a className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
-                <Link to="contact" smooth={true} duration={250}>
-                  Contact
-                </Link>
-              </a>
+              {navItem.map((item) => (
+                <a className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
+                  <Link to={item.url} smooth={true} duration={250}>
+                    {item.name}
+                  </Link>
+                </a>
+              ))}
             </div>
           </div>
 
