@@ -34,13 +34,13 @@ const BaseNavbar = () => {
 
           {/* if > lg breakpoint */}
           <div className="flex-none hidden lg:flex">
-            <div className="flex items-stretch">
+            <div className="flex">
               {navItem.map((item) => (
-                <a className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
+                <li className="btn btn-ghost btn-sm rounded-btn normal-case text-base">
                   <Link to={item.url} smooth={true} duration={250}>
                     {item.name}
                   </Link>
-                </a>
+                </li>
               ))}
             </div>
           </div>
@@ -73,7 +73,7 @@ const BaseNavbar = () => {
             isOpen ? 'block' : 'hidden'
           }`}
         >
-          <ul className="flex flex-col gap-8 uppercase text-lg font-semibold items-center justify-center text-white pb-3">
+          <ul className="flex flex-col gap-8 uppercase text-lg font-semibold items-center justify-center text-white pb-6">
             <a
               className="cursor-pointer active:text-gray-500"
               onClick={() => setOpen(!isOpen)}

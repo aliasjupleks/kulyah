@@ -1,6 +1,6 @@
 const BaseFooter = () => {
   return (
-    <footer className="p-10 footer bg-base-200 text-base-content footer-center">
+    <footer className="p-10 footer bg-gray-300 text-base-content footer-center">
       <div className="grid grid-flow-col gap-4">
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
@@ -27,7 +27,7 @@ const BaseFooter = () => {
         </div>
       </div>
       <div>
-        <p>Copyright © 2021 - All right reserved by ACME Industries Ltd</p>
+        <p>Copyright © 2021 - All right reserved by ShowOff Ltd</p>
       </div>
     </footer>
 
