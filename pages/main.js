@@ -1,6 +1,13 @@
 import MainLayout from '../components/MainLayout';
 import Card from '../components/Card';
-import { BeakerIcon } from '@heroicons/react/solid';
+import {
+  BeakerIcon,
+  ShareIcon,
+  CloudUploadIcon,
+  PencilAltIcon,
+  ClipboardListIcon,
+  CashIcon,
+} from '@heroicons/react/solid';
 
 const Homepage = () => {
   const cardPricingItem = [
@@ -25,32 +32,32 @@ const Homepage = () => {
   ];
   const cardCompItem = [
     {
-      icon: '',
+      icon: <BeakerIcon className="h-14 w-14 text-blue-500" />,
       title: 'page builder',
       caption: 'Build your page easily',
     },
     {
-      icon: '',
+      icon: <PencilAltIcon className="h-14 w-14 text-blue-500" />,
       title: 'customized domain',
       caption: 'Create your beautiful domain',
     },
     {
-      icon: '',
+      icon: <ClipboardListIcon className="h-14 w-14 text-blue-500" />,
       title: 'simple main board',
       caption: 'Make your own page with very simple main board',
     },
     {
-      icon: '',
+      icon: <CashIcon className="h-14 w-14 text-blue-500" />,
       title: 'handle your transaction payment',
       caption: 'You can handle and customize your own transaction easily',
     },
     {
-      icon: '',
+      icon: <CloudUploadIcon className="h-14 w-14 text-blue-500" />,
       title: 'easy publish page',
       caption: 'Easy to publish',
     },
     {
-      icon: '',
+      icon: <ShareIcon className="h-14 w-14 text-blue-500" />,
       title: 'share and collaborate',
       caption: 'Share it and collaborate with your friends',
     },
@@ -58,10 +65,10 @@ const Homepage = () => {
 
   return (
     <MainLayout>
-      <main className="w-screen">
+      <main className="w-full">
         <section
           id="home"
-          className="flex flex-col items-center justify-center py-8 h-screen"
+          className="flex flex-col items-center justify-center py-8 h-full"
         >
           {/* <span className="font-bold text-lg"># Home section</span> */}
           <div className="flex flex-wrap justify-center mt-28">
@@ -79,7 +86,7 @@ const Homepage = () => {
         </section>
         <section
           id="features"
-          className="flex flex-col items-center justify-center my-8 h-screen"
+          className="flex flex-col items-center justify-center my-8 h-full"
         >
           <div className="py-10 bg-gray-300">
             <div className="flex flex-col gap-5 items-center">
@@ -91,7 +98,8 @@ const Homepage = () => {
                 {cardCompItem.map((item) => (
                   <Card className="w-96 bg-white rounded-lg">
                     <div className="flex flex-col items-center justify-center h-48 gap-3">
-                      <BeakerIcon className="h-14 w-14 text-blue-500" />
+                      {/* <BeakerIcon className="h-14 w-14 text-blue-500" /> */}
+                      {item.icon}
                       <span className="text-xl font-semibold capitalize">
                         {item.title}
                       </span>
