@@ -75,7 +75,7 @@ const Homepage = () => {
             <div className="w-64 flex flex-col gap-6">
               <span className="text-5xl font-bold">ShowCase</span>
               <p className="text-lg">
-                Showoff is web builder that can help people to build their own
+                Showcase is web builder that can help people to build their own
                 page for their product and do a payment with it
               </p>
             </div>

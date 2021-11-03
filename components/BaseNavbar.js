@@ -28,7 +28,7 @@ const BaseNavbar = () => {
         <div className="w-full flex justify-between p-3 items-center">
           <div className="flex-1">
             <button className="btn btn-ghost text-lg font-bold">
-              Showoff.case
+              ShowCase
             </button>
           </div>
 
