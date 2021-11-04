@@ -70,8 +70,7 @@ const Homepage = () => {
           id="home"
           className="flex flex-col items-center justify-center py-8 h-full"
         >
-          {/* <span className="font-bold text-lg"># Home section</span> */}
-          <div className="flex flex-wrap justify-center mt-28">
+          <div className="flex flex-wrap justify-center mt-28 gap-8">
             <div className="w-64 flex flex-col gap-6">
               <span className="text-5xl font-bold">ShowCase</span>
               <p className="text-lg">
@@ -88,17 +87,16 @@ const Homepage = () => {
           id="features"
           className="flex flex-col items-center justify-center my-8 h-full"
         >
-          <div className="py-10 bg-gray-300">
-            <div className="flex flex-col gap-5 mx-8 items-center">
+          <div className="py-8 bg-gray-300">
+            <div className="flex flex-col gap-5 px-8 items-center">
               <div>
                 <span className="font-semibold text-4xl">Features</span>
                 <hr className="border-blue-500 border-2 w-full mt-3 mb-3" />
               </div>
               <div className="flex flex-wrap gap-8 justify-center">
                 {cardCompItem.map((item) => (
-                  <Card className="w-96 bg-white rounded-lg">
+                  <Card className="w-64 sm:w-96 bg-white rounded-lg">
                     <div className="flex flex-col items-center justify-center h-48 gap-3">
-                      {/* <BeakerIcon className="h-14 w-14 text-blue-500" /> */}
                       {item.icon}
                       <span className="text-xl font-semibold capitalize">
                         {item.title}
@@ -112,14 +110,14 @@ const Homepage = () => {
           </div>
         </section>
         <section id="pricing" className="my-8 h-full">
-          <div className="py-16 mx-8 flex flex-col items-center">
+          <div className="py-16 px-8 flex flex-col items-center">
             <div className="mb-8">
               <span className="font-semibold text-4xl">Pricing</span>
               <hr className="border-blue-500 border-2 w-full mt-3 mb-3" />
             </div>
             <div className="flex flex-wrap items-center justify-center gap-8">
               {cardPricingItem.map((item) => (
-                <Card className="w-96 bg-white rounded-lg">
+                <Card className="w-64 sm:w-96 bg-white rounded-lg">
                   <div className="h-72 flex flex-col items-center justify-start gap-4">
                     <span className="text-4xl font-bold">{item.access}</span>
                     <hr className="border-gray-400 border-1 w-full mt-3 mb-3" />
@@ -140,7 +138,7 @@ const Homepage = () => {
           id="contact"
           className="flex flex-col items-center justify-center py-8 h-full mb-8"
         >
-          <div className="flex flex-col w-96 mx-10 gap-4">
+          <div className="flex flex-col w-auto sm:w-96 px-10 gap-4">
             <span className="text-4xl font-semibold font-mono">
               Get in Touch
             </span>
