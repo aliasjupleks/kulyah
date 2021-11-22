@@ -67,13 +67,13 @@ const Homepage = () => {
       name: 'M. Abyan Zhafran Daffa',
       nim: '19.11.3252',
       kelas: 'IF 11',
-      img: '/gue.png',
+      img: '/gue_1.png',
     },
     {
       name: 'Ignatius Tegar Saputra',
       nim: '19.11.3298',
       kelas: 'IF 11',
-      img: '/tegar.png',
+      img: '/tegar_1.png',
     }
   ]
 
@@ -161,7 +161,7 @@ const Homepage = () => {
               {aboutItem.map((i) => (
                 <div class="card text-center shadow-2xl bg-white">
                   <div class="px-10 pt-10">
-                    <img src={i.img} class="rounded-xl"></img>
+                    <img src={i.img} class="rounded-xl" />
                   </div>
                   <div class="card-body">
                     <h2 class="card-title">{i.name}</h2>
