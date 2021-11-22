@@ -112,6 +112,15 @@ const BaseNavbar = () => {
                 Contact
               </Link>
             </a>
+
+            <a
+              className="cursor-pointer active:text-gray-500"
+              onClick={() => setOpen(!isOpen)}
+            >
+              <Link to="about" smooth={true} duration={250}>
+                About
+              </Link>
+            </a>
           </ul>
         </div>
       </div>
